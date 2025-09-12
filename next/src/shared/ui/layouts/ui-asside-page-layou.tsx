@@ -1,17 +1,28 @@
 import { ReactNode } from "react";
 
-export function UiAssidePageLayout({ header }: { header: ReactNode }) {
-    return (
-        <>
-            {header}
-            <main>
-                <div> <section>section</section>
-                    <section>section</section>
-                    <section>section</section>
-                    <section>section</section></div><div><aside>aside</aside></div>
+export function SectionContainer() {}
 
-            </main>
-            <footer>footer</footer>
-        </>
-    );
+export function UiAssidePageLayout({
+  header,
+  sections,
+  footer,
+  aside,
+}: {
+  header: ReactNode;
+  sections: ReactNode;
+  footer: ReactNode;
+  aside: ReactNode;
+}) {
+  return (
+    <>
+      {header}
+      <main>
+        <div> {sections}</div>
+        <div>
+          {aside}
+        </div>
+      </main>
+      {footer}
+    </>
+  );
 }
