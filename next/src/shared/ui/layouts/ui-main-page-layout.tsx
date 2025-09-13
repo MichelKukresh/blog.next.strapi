@@ -13,7 +13,7 @@ export function UiMainPageLayout({
     <>
       {header}
 
-     <h1 className="p-10 bg-customBlue">
+     <h1 className="p-10 bg-customBlue ">
     Hello world!
   </h1>
 
