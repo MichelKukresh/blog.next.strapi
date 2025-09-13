@@ -21,7 +21,7 @@ export function UiHeader({
         className,
       )}
     >
-      <nav className={clsx("flex gap-[10px] ")}>
+      <nav className={clsx("flex gap-[10px] w-full justify-between ")}>
         <UiLogo className="h-10 w-auto" />
 
         {/* Навигационная панель */}

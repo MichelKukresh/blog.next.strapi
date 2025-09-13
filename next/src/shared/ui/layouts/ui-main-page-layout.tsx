@@ -12,8 +12,8 @@ export function UiMainPageLayout({
   return (
     <>
       {header}
-      <main className="w-full">
-        <div className="max-w-[1024px] bg-[#085d89]">{sections}</div>
+      <main className="w-full flex justify-center">
+        <div className="max-w-[1024px] w-[1024px] bg-[#085d89]">{sections}</div>
       </main>
       {footer}
     </>
