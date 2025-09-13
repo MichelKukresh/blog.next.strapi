@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import { UiLogo } from "./ui-logo";
 import { ReactNode } from "react";
+import "tailwindcss";
 
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'About', href: '/about' },
+  { label: "Home", href: "/" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
 ];
 
 export function UiHeader({
@@ -14,24 +15,19 @@ export function UiHeader({
   className?: string;
   right?: ReactNode;
 }) {
+
   return (
-    <header
-      className={clsx(
-        "w-full bg-[#085d89]",
-        className,
-      )}
-    >
-      <nav className={clsx("flex gap-[10px] w-full justify-between ")}>
+    <header className="w-full flex justify-center bg-[#085d89] ">     
+      <nav className="max-w-[1280px] w-[1280px]  flex flex-row justify-between p-[0px]">
         <UiLogo className="h-10 w-auto" />
+
+    
 
         {/* Навигационная панель */}
         <ul className={clsx("flex gap-[10px]")}>
           {navItems.map((item, index) => (
             <li key={index}>
-              <a
-                href={item.href}
-                className=""
-              >
+              <a href={item.href} className="">
                 {item.label}
               </a>
             </li>
@@ -39,7 +35,6 @@ export function UiHeader({
         </ul>
 
         {/* Дополнительный контент справа */}
-
       </nav>
     </header>
   );

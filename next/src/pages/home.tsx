@@ -7,9 +7,10 @@ import Image from "next/image";
 export function Sections() {
   return (
     <>
-      <section>
-        <h1>What I Learned About Life and Food Backpacking Around Greece</h1>
+      <section className="">
+        <h1 className="p-[10px]">What I Learned About Life and Food Backpacking Around Greece</h1>
         <Image
+           className="p-[-10px]"
           src={banner}
           alt="Banner"
           layout="responsive" // Сохраняем соотношение сторон
@@ -19,14 +20,14 @@ export function Sections() {
         
         />
       </section>
-      <section>
+      <section  className="p-[10px]">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices dui
           diam arcu pharetra at laoreet pellentesque. Imperdiet sit ut ornare
           nulla risus id fames nascetur urna. Eros in neque tincidunt.
         </p>
       </section>
-      <section>
+      <section  className="p-[10px]">
         <p>
           Vel leo proin facilisis metus sit ut cursus sagittis. Diam donec mus
           malesuada et ac vulputate. Aenean lacinia suspendisse et mattis
@@ -36,7 +37,7 @@ export function Sections() {
           tellus diam.
         </p>
       </section>
-      <section>
+      <section  className="p-[10px]">
         <h3>In this article</h3>
         <ul>
           <li>1. How to travel without spending a dime</li>
@@ -45,7 +46,7 @@ export function Sections() {
         </ul>
       </section>
 
-      <section>
+      <section  className="p-[10px]">
         <p>
           Amet aliquet at a aliquam ac suspendisse euismod. Lectus sit in ut
           erat in. Et nulla a magna amet, amet. Sodales malesuada laoreet
@@ -55,7 +56,7 @@ export function Sections() {
         </p>
       </section>
 
-      <section>
+      <section  className="p-[10px]">
         <h2>
           How to travel without spending a dimeHow to travel without spending a
           dime
