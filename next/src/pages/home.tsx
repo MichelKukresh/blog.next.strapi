@@ -8,9 +8,9 @@ export function Sections() {
   return (
     <>
       <section className="">
-        <h1 className="p-[10px]">What I Learned About Life and Food Backpacking Around Greece</h1>
+        <h1 className="p-1">What I Learned About Life and Food Backpacking Around Greece</h1>
         <Image
-           className="p-[-10px]"
+           className="p-1"
           src={banner}
           alt="Banner"
           layout="responsive" // Сохраняем соотношение сторон
@@ -20,14 +20,14 @@ export function Sections() {
         
         />
       </section>
-      <section  className="p-[10px]">
+      <section  className="p-1">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices dui
           diam arcu pharetra at laoreet pellentesque. Imperdiet sit ut ornare
           nulla risus id fames nascetur urna. Eros in neque tincidunt.
         </p>
       </section>
-      <section  className="p-[10px]">
+      <section  className="p-1">
         <p>
           Vel leo proin facilisis metus sit ut cursus sagittis. Diam donec mus
           malesuada et ac vulputate. Aenean lacinia suspendisse et mattis
@@ -37,7 +37,7 @@ export function Sections() {
           tellus diam.
         </p>
       </section>
-      <section  className="p-[10px]">
+      <section  className="p-1">
         <h3>In this article</h3>
         <ul>
           <li>1. How to travel without spending a dime</li>
@@ -46,7 +46,7 @@ export function Sections() {
         </ul>
       </section>
 
-      <section  className="p-[10px]">
+      <section  className="p-1">
         <p>
           Amet aliquet at a aliquam ac suspendisse euismod. Lectus sit in ut
           erat in. Et nulla a magna amet, amet. Sodales malesuada laoreet
@@ -56,7 +56,7 @@ export function Sections() {
         </p>
       </section>
 
-      <section  className="p-[10px]">
+      <section  className="p-1">
         <h2>
           How to travel without spending a dimeHow to travel without spending a
           dime
