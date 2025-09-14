@@ -23,3 +23,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@theme {
+  /* --font-script: Great Vibes, cursive; */
+   --color-navy-blue: #000638;
+}
