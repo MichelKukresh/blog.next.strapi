@@ -6,6 +6,7 @@ import banner2 from "../../public/banner1.png";
 import owner from "../../public/owner.png";
 
 import { UiMainPageLayout } from "@/shared/ui/layouts/ui-main-page-layout";
+import { appControllerGetAticles } from "@/shared/api/generateStrapi";
 
 const posts = [
   {
