@@ -80,6 +80,10 @@ const posts = [
   },
 ];
 
+
+// TO-DO от сюда убрать соответственно через entities
+appControllerGetAticles().then((res) => console.log(res))
+
 export function Sections() {
   return (
     <>

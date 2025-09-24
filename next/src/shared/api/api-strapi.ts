@@ -20,7 +20,7 @@ export const createStrapi = <T>(
 
 // export type BodyType<Data> = Data;
 
-export type ErrorType<Error> = AxiosError<Error>;
+// export type ErrorType<Error> = AxiosError<Error>;
 
 
 
