@@ -3,14 +3,14 @@ import {
   blockListControllerGetList,
   blockListControllerRemoveBlockItem,
 } from "@/shared/api/generated";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"; 
 
 const blockListKey = ["block-list"] as unknown[];
 
 export function useBlockListQuery({ q }: { q?: string }) {
   return useQuery({
     queryKey: blockListKey.concat([{ q }]),
-    queryFn: () => blockListControllerGetList({ q }),
+    queryFn: () => blockListControllerGetList({ q }),  
     keepPreviousData: true,
   });
 }

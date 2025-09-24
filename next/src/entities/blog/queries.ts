@@ -1,13 +1,14 @@
-// import { useQuery } from "@tanstack/react-query";
+import { appControllerGetAticles } from "@/shared/api/generateStrapi";
+import { useQuery } from "@tanstack/react-query";
 
-// const blockListKey = ["blog"] as unknown[];
+const blockListKey = ["blog"] as unknown[];
 
-// export function useBlockListQuery({ q }: { q?: string }) {
-//   return useQuery({
-//     queryKey: blockListKey.concat([{ q }]),
-//     queryFn: () => blockListControllerGetList({ q }),
-//     keepPreviousData: true,
-//   });
-// }
+export function useBlockListQuery({ q }: { q?: string }) {
+  return useQuery({
+    queryKey: blockListKey.concat([{ q }]),
+    queryFn: () => appControllerGetAticles({ q }),
+    keepPreviousData: true,
+  });
+}
 
 // TO-DO переработать
