@@ -12,14 +12,19 @@ export type BlockListControllerGetListParams = {
 // eslint-disable-next-line
 type SecondParameter<T extends (...args: any) => any> = T extends (
   config: any,
-  args: infer P,
+  args: infer P
 ) => any
   ? P
   : never;
 
-export const appControllerGetAticles = (  params?: BlockListControllerGetListParams,
-  options?: SecondParameter<typeof createInstance>,) => {
-  return createStrapi({ url: '/api/articles?populate=*', method: 'get' });
+export const appControllerGetAticles = (
+  params?: BlockListControllerGetListParams,
+  options?: SecondParameter<typeof createStrapi>
+) => {
+  return createStrapi<BlockListDto>({
+    url: "/api/articles?populate[0]=cover&populate[1]=category&populate[2]=author.avatar",
+    method: "get",
+  });
 };
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
@@ -27,7 +32,6 @@ export const BlockItemDtoType = {
   KeyWord: "KeyWord",
   Website: "Website",
 } as const;
-
 
 export type BlockItemDtoType =
   (typeof BlockItemDtoType)[keyof typeof BlockItemDtoType];
@@ -41,17 +45,19 @@ export interface BlockItemDto {
 }
 
 export interface BlockListDto {
-  id: number;
-  ownerId: number;
-  items: BlockItemDto[];
+  data: {
+    id: number;
+    ownerId: number;
+    items: BlockItemDto[];
+  };
 }
 
-export const blockListControllerGetList = (
-  params?: BlockListControllerGetListParams,
-  options?: SecondParameter<typeof createInstance>,
-) => {
-  return createInstance<BlockListDto>(
-    { url: `/block-list`, method: "get", params },
-    options,
-  );
-};
+// export const blockListControllerGetList = (
+//   params?: BlockListControllerGetListParams,
+//   options?: SecondParameter<typeof createInstance>,
+// ) => {
+//   return createInstance<BlockListDto>(
+//     { url: `/block-list`, method: "get", params },
+//     options,
+//   );
+// };

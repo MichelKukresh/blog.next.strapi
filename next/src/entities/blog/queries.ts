@@ -3,10 +3,10 @@ import { useQuery } from "@tanstack/react-query";
 
 const blockListKey = ["blog"] as unknown[];
 
-export function useBlockListQuery({ q }: { q?: string }) {
+export function useBlogListQuery({ q }: { q?: string }) {
   return useQuery({
     queryKey: blockListKey.concat([{ q }]),
-    queryFn: () => appControllerGetAticles({ q }),
+    queryFn: () => appControllerGetAticles({ q }), 
     keepPreviousData: true,
   });
 }

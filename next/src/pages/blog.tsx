@@ -7,6 +7,7 @@ import owner from "../../public/owner.png";
 
 import { UiMainPageLayout } from "@/shared/ui/layouts/ui-main-page-layout";
 import { appControllerGetAticles } from "@/shared/api/generateStrapi";
+import { BlogList } from "@/features/blog/ui/blog-lists";
 
 const posts = [
   {
@@ -80,9 +81,8 @@ const posts = [
   },
 ];
 
-
 // TO-DO от сюда убрать соответственно через entities
-appControllerGetAticles().then((res) => console.log(res))
+// appControllerGetAticles().then((res) => console.log(res));
 
 export function Sections() {
   return (
@@ -136,6 +136,11 @@ export function Sections() {
           ))}
         </ul>
       </section>
+
+      <section>
+        <BlogList></BlogList>
+      </section>
+
       <section>Пагинация</section>
       <section>Форма + контакты</section>
     </>
